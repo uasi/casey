@@ -1,30 +1,31 @@
 extern crate regex;
+
 use regex::{Captures, Regex};
 use std::ascii::AsciiExt;
 
 pub trait Casey {
-    /// "snake_case"
+    /// Returns the snake_case equivalent of this string.
     fn to_snakecase(&self) -> String;
 
-    /// "Upper_Snake_Case"
+    /// Returns the Upper_Snake_Case equivalent of this string.
     fn to_upper_snakecase(&self) -> String;
 
-    /// "SCREAMING_SNAKE_CASE"
+    /// Returns the SCREAMING_SNAKE_CASE equivalent of this string.
     fn to_screaming_snakecase(&self) -> String;
 
-    /// "camelCase"
+    /// Returns the camelCase equivalent of this string.
     fn to_camelcase(&self) -> String;
 
-    /// "UpperCamelCase"
+    /// Returns the UpperCamelCase equivalent of this string.
     fn to_upper_camelcase(&self) -> String;
 
-    /// "hyphen-case"
+    /// Returns the hyphen-case equivalent of this string.
     fn to_hyphencase(&self) -> String;
 
-    /// "Upper-Hyphen-Case"
+    /// Returns the Upper-Hyphen-Case equivalent of this string.
     fn to_upper_hyphencase(&self) -> String;
 
-    /// "SCREAMING-HYPHEN-CASE"
+    /// Returns the SCREAMING-HYPHEN-CASE equivalent of this string.
     fn to_screaming_hyphencase(&self) -> String;
 }
 
@@ -78,7 +79,6 @@ impl Casey for str {
         self.to_screaming_snakecase().replace("_", "-")
     }
 }
-
 
 #[test]
 fn test_to_snakecase() {
