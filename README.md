@@ -2,6 +2,18 @@
 
 Casey converts strings to whatever case.
 
+## Synopsis
+
+```rust
+extern crate casey;
+use casey::Casey;
+
+fn main() {
+    println!("{}", "FooBARBaz".to_snakecase()); // => "foo_bar_baz"
+    println!("{}", "foo_bar_baz".to_camelcase()); // => "fooBarBaz"
+}
+```
+
 ## License
 
 Casey is released under the MIT license.
