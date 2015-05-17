@@ -82,35 +82,40 @@ impl Casey for str {
 
 #[test]
 fn test_to_snakecase() {
-    assert_eq!(&"FooBARBaz-QUUX42".to_snakecase(), "foo_bar_baz_quux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_snakecase(), "haz_foo_bar_baz_quux42");
 }
 
 #[test]
 fn test_to_upper_snakecase() {
-    assert_eq!(&"FooBARBaz-QUUX42".to_upper_snakecase(), "Foo_Bar_Baz_Quux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_upper_snakecase(), "Haz_Foo_Bar_Baz_Quux42");
 }
 
 #[test]
 fn test_to_screaming_snakecase() {
-    assert_eq!(&"FooBARBaz-QUUX42".to_screaming_snakecase(), "FOO_BAR_BAZ_QUUX42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_screaming_snakecase(), "HAZ_FOO_BAR_BAZ_QUUX42");
 }
 
 #[test]
 fn test_to_camelcase() {
-    assert_eq!(&"foo_BarBaz-QUUX42".to_camelcase(), "fooBarBazQuux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_camelcase(), "hazFooBarBazQuux42");
 }
 
 #[test]
 fn test_to_upper_camelcase() {
-    assert_eq!(&"foo_BarBaz-QUUX42".to_upper_camelcase(), "FooBarBazQuux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_upper_camelcase(), "HazFooBarBazQuux42");
 }
 
 #[test]
 fn test_to_hyphencase() {
-    assert_eq!(&"FooBARBaz-QUUX42".to_hyphencase(), "foo-bar-baz-quux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_hyphencase(), "haz-foo-bar-baz-quux42");
 }
 
 #[test]
 fn test_to_upper_hyphencase() {
-    assert_eq!(&"FooBARBaz-QUUX42".to_upper_hyphencase(), "Foo-Bar-Baz-Quux42");
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_upper_hyphencase(), "Haz-Foo-Bar-Baz-Quux42");
+}
+
+#[test]
+fn test_to_screaming_hyphencase() {
+    assert_eq!(&"HAZ_FooBARBaz-QUUX42".to_screaming_hyphencase(), "HAZ-FOO-BAR-BAZ-QUUX42");
 }
